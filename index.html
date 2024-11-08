@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="icon" href="img/login.ico"/>
+    
+    <meta name="author" content="Sars Project">
+    <meta name="description" content="Free login template made with Bootstrap 5">
+    
+    <!-- Bootstrap Core -->    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->    
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!-- Custom style -->    
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    
+    <style>
+        /* Main container layout */
+        .main-container {
+            display: flex;
+            min-height: 100vh;
+            background: #cad0d2;
+        }
+
+        /* Form Section */
+        .form-section {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            background-color: #f8f9fa;
+        }
+
+        .form-wrapper {
+            width: 100%;
+            max-width: 400px;
+            background: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-header {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .form-title {
+            font-family: 'Roboto', sans-serif;
+            font-size: 24px;
+            color: #333;
+            line-height: 1.2;
+        }
+
+        /* Image Section */
+        .image-section {
+            width: 50%;
+            background-image: url('img/header.jpg'); /* Ensure this path is correct */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .image-section .title-overlay {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* Social login button styles */
+        .social-login-btn {
+            border-radius: 25px;
+            font-weight: bold;
+            padding: 10px;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn-google {
+            background-color: #DB4437;
+            color: white;
+        }
+        .btn-google:hover {
+            background-color: #C53929;
+        }
+        .btn-facebook {
+            background-color: #4267B2;
+            color: white;
+        }
+        .btn-facebook:hover {
+            background-color: #365899;
+        }
+        .social-login-btn i {
+            margin-right: 8px;
+            font-size: 18px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .image-section {
+                display: none; /* Hide image on smaller screens */
+            }
+            .form-section {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+<main>
+    <div class="main-container">
+        <!-- Login Form Section -->
+        <div class="form-section">
+            <div class="form-wrapper">
+                <div class="form-header">
+                    <span class="form-title">
+                        Login to <strong>Rizqi Nur Login Page</strong>
+                    </span>
+                </div>
+
+                <form class="form-content">
+                    <div class="input-wrapper">
+                        <input class="input-style form-control" type="text" name="username" placeholder="Username" required>
+                        <span class="input-style-focus"></span>
+                    </div>
+
+                    <div class="input-wrapper">
+                        <div class="input-group">
+                            <input class="form-control" type="password" placeholder="Password" id="password" required>
+                            <span class="form-control-focus"></span>
+                            <div class="input-group-text" onclick="passwordVisibility();" style="cursor: pointer;">
+                                <i class="fa fa-eye" id="showPass"></i>
+                                <i class="fa fa-eye-slash d-none" id="hidePass"></i>
+                            </div>
+                        </div>
+                    </div>
+                 
+                    <button class="button-style w-100">
+                        Login
+                    </button>
+
+                    <!-- Social login buttons -->
+                    <div class="mt-4">
+                        <button class="btn social-login-btn btn-google w-100 mb-2" type="button">
+                            <i class="fa fa-google"></i> Login with Google
+                        </button>
+                        <button class="btn social-login-btn btn-facebook w-100" type="button">
+                            <i class="fa fa-facebook"></i> Login with Facebook
+                        </button>
+                    </div>
+
+                    <div class="checkbox-wrapper mt-4">
+                        <input type="checkbox" class="checkbox-style" id="checkbox" name="remember-me">
+                        <label class="label-checkbox-style" for="checkbox">
+                            Remember me
+                        </label>
+
+                        <a href="#" class="txt-style2">
+                            <strong>Forgot your password?</strong>
+                        </a>
+                    </div>
+                    
+                    <p class="txt-style1 mt-5">Not a member yet? <a class="txt-style2" href="#"><strong>Sign Up!</strong></a></p>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Image Section -->
+        <div class="image-section">
+            <div class="title-overlay">
+                Rizqi Nur Login Page
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="js/password-visibility.js"></script>
+
+</body>
+</html>
